@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--school模块所有bean的声明-->
+    <!--    <bean name="school" class="com.ba04.School">-->
+    <!--        <property name="name" value="向日葵幼儿园"/>-->
+    <!--        <property name="address" value="无锡"/>-->
+    <!--    </bean>-->
+
+    <!--byType-->
+
+    <bean name="school" class="com.ba05.School">
+        <property name="name" value="南京航天航空幼儿园"/>
+        <property name="address" value="南京"/>
+    </bean>
+
+</beans>
