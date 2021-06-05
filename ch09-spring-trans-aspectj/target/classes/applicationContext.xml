@@ -2,8 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:aop="http://www.springframework.org/schema/aop"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!--把数据库的配置信息，写入一个独立文件中，然后调用
         先要让spring知道jdbc.properties文件位置
@@ -59,7 +58,7 @@
         <property name="dataSource" ref="myDataSource"/>
     </bean>
 
-    <!--2.声明业务员方法它的属性（隔离级别，传播行为，超时时间）
+    <!--2.声明业务方法它的属性（隔离级别，传播行为，超时时间）
         id:自定义名称，表示 <tx：advice>和</tx:advice>之间的配置内容
         transaction-manager:事务管理器的id
     -->
@@ -87,20 +86,5 @@
         </tx:attributes>
     </tx:advice>
 
-
-    <!--配置aop-->
-    <aop:config>
-        <!--配置切入点表达式：指定哪些包中类，要使用事务，
-            id：切入点表达式的名称，唯一值
-            expression：切入点表达式，指定哪些类要使用事务 aspectj会创建代理对象
-        -->
-        <aop:pointcut id="servicePt" expression="execution(* *..service..*.*(..))"/>
-
-        <!--配置增加器，关联adivce和pointcut
-            advice-ref:通知，上面的tx：advice那里的配置
-            pointcut-ref=切入点表达式
-        -->
-        <aop:advisor advice-ref="myAdvice" pointcut-ref="servicePt"/>
-    </aop:config>
 
 </beans>

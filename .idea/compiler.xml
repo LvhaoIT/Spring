@@ -29,7 +29,7 @@
       <module name="ch07-spring-trans" target="1.8" />
       <module name="ch08-spring-anno" target="1.8" />
       <module name="ch09-spring-trans-aspectj" target="1.8" />
-      <module name="ch10-spring-web" target="1.7" />
+      <module name="ch10-spring-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
