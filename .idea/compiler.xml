@@ -8,10 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch05-aop-aspectj" />
         <module name="ch06-spring-mybatis" />
-        <module name="ch03-di-anno" />
         <module name="ch04-aop-leadin" />
+        <module name="ch07-spring-trans" />
+        <module name="ch09-spring-trans-aspectj" />
         <module name="ch02-di-xml" />
         <module name="ch01-hello-spring" />
+        <module name="ch10-spring-web" />
+        <module name="ch03-di-anno" />
+        <module name="ch08-spring-anno" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +26,10 @@
       <module name="ch04-aop-leadin" target="1.8" />
       <module name="ch05-aop-aspectj" target="1.8" />
       <module name="ch06-spring-mybatis" target="1.8" />
+      <module name="ch07-spring-trans" target="1.8" />
+      <module name="ch08-spring-anno" target="1.8" />
+      <module name="ch09-spring-trans-aspectj" target="1.8" />
+      <module name="ch10-spring-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
